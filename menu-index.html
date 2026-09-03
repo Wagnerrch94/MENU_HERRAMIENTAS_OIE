@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Herramientas OIE</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --tinta: #0f2f3d;
+    --primario: #0e6e6e;
+    --primario-oscuro: #0a4f4f;
+    --primario-claro: #e6f3f2;
+    --ambar: #b3720a;
+    --ambar-claro: #fdf2e0;
+    --fondo: #f5f7f7;
+    --superficie: #ffffff;
+    --borde: #e1e6e6;
+    --texto: #14201f;
+    --texto-suave: #5b6b6a;
+  }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Inter", -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+  }
+
+  header {
+    background: var(--tinta);
+    color: #fff;
+    padding: 26px 20px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  header .marca-icono {
+    width: 40px; height: 40px; border-radius: 10px;
+    background: var(--primario); flex-shrink: 0;
+    display: flex; align-items: center; justify-content: center;
+  }
+  header .titulo { font-family: "Sora", sans-serif; font-weight: 700; font-size: 18px; letter-spacing: -0.01em; }
+  header .subtitulo { font-size: 12.5px; color: #aebdbc; margin-top: 2px; }
+
+  .contenedor { max-width: 480px; margin: 0 auto; padding: 22px 16px 44px; }
+  .contenedor p.intro { font-size: 13.5px; color: var(--texto-suave); margin: 0 0 18px; line-height: 1.55; }
+
+  .opcion {
+    display: flex; align-items: center; gap: 16px;
+    background: var(--superficie);
+    border: 1.5px solid var(--borde);
+    border-radius: 16px;
+    padding: 20px;
+    margin-bottom: 14px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 1px 2px rgba(15,47,61,0.04);
+    transition: transform 0.08s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  .opcion:active { transform: scale(0.98); }
+
+  .opcion.otm { border-left: 4px solid var(--ambar); }
+  .opcion.otm:hover { border-color: var(--ambar); box-shadow: 0 4px 14px rgba(179,114,10,0.12); }
+  .opcion.equipos { border-left: 4px solid var(--primario); }
+  .opcion.equipos:hover { border-color: var(--primario); box-shadow: 0 4px 14px rgba(14,110,110,0.12); }
+
+  .opcion .icono {
+    width: 48px; height: 48px; border-radius: 12px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 24px; flex-shrink: 0;
+  }
+  .opcion.otm .icono { background: var(--ambar-claro); }
+  .opcion.equipos .icono { background: var(--primario-claro); }
+
+  .opcion .texto { flex: 1; }
+  .opcion .texto .nombre {
+    font-family: "Sora", sans-serif; font-weight: 700; font-size: 16px;
+    color: var(--tinta); margin-bottom: 3px; line-height: 1.25;
+  }
+  .opcion .texto .detalle { font-size: 12.5px; color: var(--texto-suave); line-height: 1.4; }
+
+  .opcion .flecha { color: var(--texto-suave); flex-shrink: 0; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="marca-icono">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M11 2v6M13 2v6M4 8h16l-1.5 11a2 2 0 0 1-2 1.7H7.5a2 2 0 0 1-2-1.7L4 8Z" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M9 12h6M12 9v6" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+  </div>
+  <div>
+    <div class="titulo">Herramientas OIE</div>
+    <div class="subtitulo">Elige qué quieres hacer</div>
+  </div>
+</header>
+
+<div class="contenedor">
+  <p class="intro">Selecciona una de las siguientes herramientas:</p>
+
+  <a class="opcion otm" href="https://script.google.com/macros/s/AKfycbyEEBkEZ0wxZaxpFoXhfdgyCrWOKBebSjFEZVbteaRgwT7u_wBUEt26sT5RqN2TLrAp/exec">
+    <div class="icono">📋</div>
+    <div class="texto">
+      <div class="nombre">Registro de OTMs</div>
+      <div class="detalle">Registrar atenciones y mantenimientos biomédicos</div>
+    </div>
+    <div class="flecha">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </a>
+
+  <a class="opcion equipos" href="https://wagnerrch94.github.io/ACTUALIZACION-DE-EQUIPOS-BIOMEDICOS/">
+    <div class="icono">🛠️</div>
+    <div class="texto">
+      <div class="nombre">Actualización de Equipos Biomédicos</div>
+      <div class="detalle">Escanear, actualizar estado y registrar equipos</div>
+    </div>
+    <div class="flecha">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </a>
+</div>
+
+</body>
+</html>
