@@ -15,6 +15,8 @@
     --primario-claro: #e6f3f2;
     --ambar: #b3720a;
     --ambar-claro: #fdf2e0;
+    --morado: #5b4fc7;
+    --morado-claro: #ecebfa;
     --fondo: #f5f7f7;
     --superficie: #ffffff;
     --borde: #e1e6e6;
@@ -66,6 +68,8 @@
   .opcion.otm:hover { border-color: var(--ambar); box-shadow: 0 4px 14px rgba(179,114,10,0.12); }
   .opcion.equipos { border-left: 4px solid var(--primario); }
   .opcion.equipos:hover { border-color: var(--primario); box-shadow: 0 4px 14px rgba(14,110,110,0.12); }
+  .opcion.programacion { border-left: 4px solid var(--morado); }
+  .opcion.programacion:hover { border-color: var(--morado); box-shadow: 0 4px 14px rgba(91,79,199,0.12); }
 
   .opcion .icono {
     width: 48px; height: 48px; border-radius: 12px;
@@ -74,6 +78,7 @@
   }
   .opcion.otm .icono { background: var(--ambar-claro); }
   .opcion.equipos .icono { background: var(--primario-claro); }
+  .opcion.programacion .icono { background: var(--morado-claro); }
 
   .opcion .texto { flex: 1; }
   .opcion .texto .nombre {
@@ -121,6 +126,19 @@
     <div class="texto">
       <div class="nombre">Actualización de Equipos Biomédicos</div>
       <div class="detalle">Escanear, actualizar estado y registrar equipos</div>
+    </div>
+    <div class="flecha">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+    </div>
+  </a>
+
+  <a class="opcion programacion" href="https://script.google.com/macros/s/AKfycbxaUUT0A2dpt4UHrI_YBLmLtvtrM7IzUFO-fr-JE_8IiUX7FeTiRrCphjE5eeZIq9EJKg/exec">
+    <div class="icono">📅</div>
+    <div class="texto">
+      <div class="nombre">Programación Diaria</div>
+      <div class="detalle">Consulta la programación de técnicos (solo lectura)</div>
     </div>
     <div class="flecha">
       <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
